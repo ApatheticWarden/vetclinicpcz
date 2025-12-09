@@ -1,130 +1,219 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VetClinic;
 
 namespace VetClinicConsole
 {
-    internal class EmployeeManager: Window
+    internal class EmployeeManager : Window
     {
+        private Database _db;
+        private List<Worker> _workers = new List<Worker>();
+
+        // Commands dictionary
+        private Dictionary<string, Action<string[]>> _commands;
+
+        public EmployeeManager()
+        {
+            _commands = new Dictionary<string, Action<string[]>>(StringComparer.OrdinalIgnoreCase)
+            {
+                { "employees", CmdEmployees }, { "1", CmdEmployees },
+                { "extend", CmdExtend },       { "2", CmdExtend },
+                { "help", CmdHelp },           { "3", CmdHelp },
+                { "find", CmdFind },           { "4", CmdFind },
+                { "edit", CmdEdit },           { "5", CmdEdit },
+                { "del", CmdEdit },           { "6", CmdEdit },
+                { "add", CmdEdit },           { "7", CmdEdit },
+                { "clear", CmdClear },
+                { "exit", CmdExit }, { "*", CmdExit }, { "0", CmdExit }
+            };
+        }
+
         public override void Run()
         {
             Console.Clear();
-            string logo = "   __                _                                                                  \r\n  /__\\ __ ___  _ __ | | ___  _   _  ___  ___    /\\/\\   __ _ _ __   __ _  __ _  ___ _ __ \r\n /_\\| '_ ` _ \\| '_ \\| |/ _ \\| | | |/ _ \\/ _ \\  /    \\ / _` | '_ \\ / _` |/ _` |/ _ \\ '__|\r\n//__| | | | | | |_) | | (_) | |_| |  __/  __/ / /\\/\\ \\ (_| | | | | (_| | (_| |  __/ |   \r\n\\__/|_| |_| |_| .__/|_|\\___/ \\__, |\\___|\\___| \\/    \\/\\__,_|_| |_|\\__,_|\\__, |\\___|_|   \r\n              |_|            |___/                                      |___/           ";
-            string helpString = "\n1) Employees <lines> <page>| Shows n employees at k page (Standart 25 per page)\n" +
-                        "2) Extend <ID> | Extends data of employee with provided ID\n" +
-                        "3) Help | Shows this tip\n" +
-                        "4) Find | Finds different worker by ID or Name with Surname" +
-                        "\n*) Exit | Exit from programm";
-            List<Worker> Workers = new List<Worker>();
+            PrintLogo();
+            PrintHelp();
 
-            // Initialization
-            Database vetsdb = new Database("./Resources/Database/vets.db");
-            Console.WriteLine(logo);
-            Console.WriteLine("Here are some commands:");
-            Console.WriteLine(helpString);
+            _db = new Database("./Resources/Database/vets.db");
+
+            if (_db._connection == null)
+            {
+                Console.WriteLine("⚠ ERROR: Database failed to load!");
+                return;
+            }
 
             while (true)
             {
-                string answ = Console.ReadLine();
-                if (vetsdb._connection != null)
+                Console.Write("\n> ");
+                string? input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
                 {
-                    var parts = answ.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                    if (parts.Length == 0)
-                    {
-                        Console.WriteLine("Invalid command, try again! Help for Tips");
-                        continue;
-                    }
-                    if (parts.Length > 0 && (parts[0].ToLower() == "employees" || parts[0].ToLower() == "1"))
-                    {
-                        if (parts.Length > 1) uint.TryParse(parts[1], out vetsdb.lines);
-                        if (parts.Length > 2) int.TryParse(parts[2], out vetsdb.page);
+                    Console.WriteLine("Empty command. Type 'help'.");
+                    continue;
+                }
 
-                        try
-                        {
-                            Workers = vetsdb.LoadEmployees(vetsdb._connection, vetsdb.lines, vetsdb.page);
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine("Err during loading workers list: List is null " + e);
-                            break;
-                        }
-                        if (Workers.Count > 0)
-                        {
-                            foreach (Worker w in Workers)
-                                Console.WriteLine(w.ToString());
-                            Console.WriteLine($"Count: {vetsdb.lines} | Page: {vetsdb.page} ");
-                        }
-                        else
-                        {
-                            Console.WriteLine("ERR | Can`t load workers");
-                        }
-                    }
-                    else if (parts.Length > 0 && (parts[0].ToLower() == "extend" || parts[0].ToLower() == "2"))
-                    {
-                        if (Workers.Count > 0 && parts.Length > 1)
-                        {
-                            uint id;
-                            uint.TryParse(parts[1], out id);
+                string[] parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string command = parts[0];
+                string[] args = parts.Skip(1).ToArray();
 
-                            foreach (Worker w in Workers)
-                            {
-                                if (w.GetID() == id)
-                                {
-                                    Console.WriteLine("\n" + w.OutputData() + "\n");
-                                }
-                            }
-                        }
-                        else if (Workers.Count == 0)
-                        {
-                            Console.WriteLine("Wait a sec, load some workers first! (help for Tips)");
-                            continue;
-                        }
-                    }
-                    else if (parts.Length == 1 && (parts[0].ToLower() == "help" || parts[0].ToLower() == "3"))
-                    {
-                        Console.WriteLine(helpString);
-                    }
-                    else if (parts.Length > 0 && (parts[0].ToLower() == "find" || parts[0].ToLower() == "4"))
-                    {
-                        if (parts.Length > 1 && uint.TryParse(parts[1], out uint id))
-                        {
-                            var worker = vetsdb.FindByID(id);
-                            if (worker != null)
-                                Console.WriteLine("\n" + worker.OutputData());
-                            else
-                                Console.WriteLine(" Worker not found!");
-                        }
-                        else if (parts.Length > 2)
-                        {
-                            var worker = vetsdb.FindByName(parts[1], parts[2]);
-                            if (worker != null)
-                                Console.WriteLine("\n" + worker.OutputData());
-                            else
-                                Console.WriteLine(" Worker not found!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Invalid syntax\n Find <ID>\n OR\n Find John Doe");
-                        }
-                    }
-                    else if (parts[0].ToLower() == "clear") {
-                        Console.Clear();
-                        Console.WriteLine($"{logo}\n{helpString}");
-                    }
-                    else if (parts[0].ToLower() == "exit" || parts[0].ToLower() == "*" || parts[0].ToLower() == "0")
-                    {
-                        var app = new AlmostOpusMagnum();
-                        app.Run();
-                    }
+                if (_commands.TryGetValue(command, out var handler))
+                {
+                    handler.Invoke(args);
                 }
                 else
                 {
-                    Console.WriteLine("Warning! Your database is not loaded correctly!");
+                    Console.WriteLine("Unknown command. Type 'help'.");
                 }
             }
+        }
+
+        // ────────────────────────────────────────────────────────────
+        // COMMAND IMPLEMENTATIONS
+        // ────────────────────────────────────────────────────────────
+
+        private void CmdEmployees(string[] args)
+        {
+            uint lines = 25;
+            int page = 1;
+
+            if (args.Length > 0) uint.TryParse(args[0], out lines);
+            if (args.Length > 1) int.TryParse(args[1], out page);
+
+            try
+            {
+                _workers = _db.LoadEmployees(_db._connection, lines, page);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading employees: " + ex.Message);
+                return;
+            }
+
+            if (_workers.Count == 0)
+            {
+                Console.WriteLine("No employees found.");
+                return;
+            }
+
+            foreach (var w in _workers)
+                Console.WriteLine(w);
+
+            Console.WriteLine($"Count: {lines} | Page: {page}");
+        }
+
+        private void CmdExtend(string[] args)
+        {
+            if (_workers.Count == 0)
+            {
+                Console.WriteLine("Load employees first with 'employees' command.");
+                return;
+            }
+
+            if (args.Length == 0 || !uint.TryParse(args[0], out uint id))
+            {
+                Console.WriteLine("Syntax: extend <ID>");
+                return;
+            }
+
+            var worker = _workers.FirstOrDefault(w => w.GetID() == id);
+
+            Console.WriteLine(worker != null
+                ? "\n" + worker.OutputData()
+                : "Worker not found in loaded list.");
+        }
+
+        private void CmdHelp(string[] args) => PrintHelp();
+
+        private void CmdFind(string[] args)
+        {
+            if (args.Length == 1 && uint.TryParse(args[0], out uint id))
+            {
+                var w = _db.FindByID(id);
+                Console.WriteLine(w?.OutputData() ?? "Worker not found.");
+            }
+            else if (args.Length == 2)
+            {
+                var w = _db.FindByName(args[0], args[1]);
+                Console.WriteLine(w?.OutputData() ?? "Worker not found.");
+            }
+            else
+            {
+                Console.WriteLine("Usage:\n find <ID>\n find <Name> <Surname>");
+            }
+        }
+
+        private void CmdEdit(string[] args)
+        {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Usage: edit <ID>");
+                return;
+            }
+
+            if (!uint.TryParse(args[0], out uint id))
+            {
+                Console.WriteLine("Invalid ID.");
+                return;
+            }
+
+            _db.EditWorker(id);
+        }
+
+        private void CmdDelete(string[] args) {
+            if (args.Length < 2){
+                Console.WriteLine("Usage: delete <ID> <TableName>");
+                return;
+            }
+            if (!uint.TryParse(args[0], out uint id)){
+                Console.WriteLine("Invalid ID.");
+                return;
+            }
+            string table = args[1];
+            _db.DeleteRecord(id, table);
+        }
+
+        private void CmdClear(string[] args)
+        {
+            Console.Clear();
+            PrintLogo();
+            PrintHelp();
+        }
+
+        private void CmdExit(string[] args)
+        {
+            var app = new AlmostOpusMagnum();
+            app.Run();
+        }
+
+        // ────────────────────────────────────────────────────────────
+        // UTILITY METHODS
+        // ────────────────────────────────────────────────────────────
+
+        private void PrintLogo()
+        {
+            Console.WriteLine(
+@"   __                _                                                                  
+  /__\ __ ___  _ __ | | ___  _   _  ___  ___    /\/\   __ _ _ __   __ _  __ _  ___ _ __ 
+ /_\| '_ ` _ \| '_ \| |/ _ \| | | |/ _ \/ _ \  /    \ / _` | '_ \ / _` |/ _` |/ _ \ '__|
+//__| | | | | | |_) | | (_) | |_| |  __/  __/ / /\/\ \ (_| | | | | (_| | (_| |  __/ |   
+\__/|_| |_| |_| .__/|_|\___/ \__, |\___|\___| \/    \/\__,_|_| |_|\__,_|\__, |\___|_|   
+              |_|            |___/                                      |___/            ");
+        }
+
+        private void PrintHelp()
+        {
+            Console.WriteLine(@"
+COMMANDS:
+1) employees <lines> <page>      - Shows N employees at page K
+2) extend <ID>                    - Shows extended info from loaded employees
+3) help                           - Shows this help menu
+4) find <ID> | <Name> <Surname>   - Find employee by ID or full name
+5) edit <ID>                      - Edit employee data
+clear                             - Clear the screen
+exit / 0 / *                      - Exit to main menu
+");
         }
     }
 }

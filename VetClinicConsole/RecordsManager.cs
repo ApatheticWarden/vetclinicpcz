@@ -15,8 +15,20 @@ namespace VetClinicConsole
             string helpString = "1) Show <Lines> <Pages> | Show n records by m pages";
 
             Console.WriteLine(logo, "\n", helpString);
-            while (true) {
-                var recordsdb = new Database("");
+            var vetsdb = new Database("./Resources/Database/vets.db");
+            while (true)
+            {
+                var answ = Console.ReadLine();
+                if (vetsdb._connection != null)
+                {
+                    var parts = answ.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                    if (parts.Length == 0)
+                    {
+                        Console.WriteLine("Invalid command, try again! Help for Tips");
+                        continue;
+                    }
+
+                }
             }
         }
     }
