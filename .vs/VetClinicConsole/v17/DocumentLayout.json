@@ -7,44 +7,44 @@
       "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\recordsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\almostopusmagnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\almostopusmagnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\almostopusmagnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\almostopusmagnum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|c:\\users\\student\\downloads\\hliebbeseda\\vetclinicpcz\\vetclinicconsole\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5DCEBBC-2D34-4191-AB93-13E48C502985}|VetClinicConsole\\VetClinicConsole.csproj|solutionrelative:vetclinicconsole\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -76,14 +76,14 @@
               "RelativeDocumentMoniker": "VetClinicConsole\\RecordsManager.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\RecordsManager.cs",
               "RelativeToolTip": "VetClinicConsole\\RecordsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wCUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T14:26:35.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Animal.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Animal.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Animal.cs",
@@ -91,11 +91,12 @@
               "RelativeToolTip": "VetClinicConsole\\Animal.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:25:33.215Z"
+              "WhenOpened": "2025-11-18T14:25:33.215Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Owner.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Owner.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Owner.cs",
@@ -103,11 +104,12 @@
               "RelativeToolTip": "VetClinicConsole\\Owner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:06:46.01Z"
+              "WhenOpened": "2025-11-18T14:06:46.01Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Person.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Person.cs",
@@ -115,7 +117,8 @@
               "RelativeToolTip": "VetClinicConsole\\Person.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:06:53.604Z"
+              "WhenOpened": "2025-11-18T14:06:53.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -127,49 +130,51 @@
               "RelativeToolTip": "VetClinicConsole\\Client.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:06:25.549Z"
+              "WhenOpened": "2025-11-18T14:06:25.549Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Database.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Database.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Database.cs",
               "RelativeToolTip": "VetClinicConsole\\Database.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAuwGEBAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T13:58:05.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Record.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Record.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Record.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Record.cs",
               "RelativeToolTip": "VetClinicConsole\\Record.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T13:57:45.31Z"
+              "WhenOpened": "2025-11-18T13:57:45.31Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "AlmostOpusMagnum.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\AlmostOpusMagnum.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\AlmostOpusMagnum.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\AlmostOpusMagnum.cs",
               "RelativeToolTip": "VetClinicConsole\\AlmostOpusMagnum.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T13:43:39.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Window.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Window.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Window.cs",
@@ -177,30 +182,31 @@
               "RelativeToolTip": "VetClinicConsole\\Window.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T13:43:30.252Z"
+              "WhenOpened": "2025-11-18T13:43:30.252Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Worker.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\Worker.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\Worker.cs",
               "RelativeToolTip": "VetClinicConsole\\Worker.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA6wAoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T13:43:29.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmployeeManager.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\EmployeeManager.cs",
               "RelativeDocumentMoniker": "VetClinicConsole\\EmployeeManager.cs",
               "ToolTip": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\EmployeeManager.cs",
               "RelativeToolTip": "VetClinicConsole\\EmployeeManager.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAwwBUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAwwHsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T10:10:18.475Z",
               "EditorCaption": ""

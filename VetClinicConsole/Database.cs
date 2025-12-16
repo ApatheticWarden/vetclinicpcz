@@ -59,7 +59,6 @@ namespace VetClinicConsole
                         }
                     }
                 }
-                //CloseDB();
             }
             catch (Exception e)
             {
@@ -81,14 +80,16 @@ namespace VetClinicConsole
                     {
                         while (reader.Read())
                         {
-                            // Add some data here
-                            //var w = new Record(DateTime dt,Client cli, Animal clianm);
-                            //buffer.Add(w);
+                            uint id = Convert.ToUInt32(reader["ID"]);
+                            uint _client_id = Convert.ToUInt32(reader["ClientID"]);
+                            uint _an_id = Convert.ToUInt32(reader["Animal_ID"]);
+                            string date = reader["Date"].ToString();
+                            string reason = reader["Reason"].ToString();
+                            var r = new Record(id,_client_id, _an_id ,date, reason);
+                            buffer.Add(r);
                         }
                     }
                 }
-                CloseDB();
-
             }
             catch (Exception e)
             {

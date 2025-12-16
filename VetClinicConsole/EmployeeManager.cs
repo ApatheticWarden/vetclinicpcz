@@ -76,7 +76,7 @@ namespace VetClinicConsole
         private void CmdEmployees(string[] args)
         {
             uint lines = 25;
-            int page = 1;
+            int page = 0;
 
             if (args.Length > 0) uint.TryParse(args[0], out lines);
             if (args.Length > 1) int.TryParse(args[1], out page);
