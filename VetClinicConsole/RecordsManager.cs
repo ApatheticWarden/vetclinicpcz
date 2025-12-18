@@ -60,11 +60,11 @@ namespace VetClinicConsole
                 ? "\n" + record.OutputData()
                 : "Record not found in loaded list.");
         }
-        public override void Run()
+        public override void Run(Database db)
         {
             Console.Clear();
-
-            _db = new Database("./Resources/Database/vets.db");
+            if (db._connection == null) return;
+            _db = db;
 
             string logo = "   __                        _     \r\n  /__\\ ___  ___ ___  _ __ __| |___ \r\n / \\/// _ \\/ __/ _ \\| '__/ _` / __|\r\n/ _  \\  __/ (_| (_) | | | (_| \\__ \\\r\n\\/ \\_/\\___|\\___\\___/|_|  \\__,_|___/\r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   ";
             string helpString = "1) Show <Lines> <Pages> | Show n records by m pages";

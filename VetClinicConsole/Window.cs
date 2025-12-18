@@ -8,7 +8,8 @@ namespace VetClinicConsole
 {
     public abstract class Window
     {
-        public abstract void Run();
+        public abstract void Run(Database _db);
+
         public void Input() { 
             
         }

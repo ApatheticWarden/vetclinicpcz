@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace VetClinicConsole
 {
-    internal class Database
+    public class Database
     {
         public readonly SqliteConnection _connection;
         public uint lines = 25;
@@ -208,6 +208,7 @@ namespace VetClinicConsole
             while (true)
             {
                 Console.WriteLine("Current Worker Data:");
+                Console.WriteLine($"Worker ID: {ID}");
                 Console.WriteLine($"1) Name: {newName}");
                 Console.WriteLine($"2) Last Name: {newLastName}");
                 Console.WriteLine($"3) Hire Date: {newHireDate}");
@@ -291,7 +292,9 @@ namespace VetClinicConsole
         {
             string query = @"
         UPDATE EMPLOYEES
-        SET Name = @Name,
+        SET 
+            ID = @ID,
+            Name = @Name,
             Last_name = @LastName,
             Hire_Date = @HireDate,
             Occupation = @Occupation,
@@ -300,7 +303,7 @@ namespace VetClinicConsole
 
             using var command = _connection.CreateCommand();
             command.CommandText = query;
-
+            command.Parameters.AddWithValue("@ID", ID);
             command.Parameters.AddWithValue("@Name", name);
             command.Parameters.AddWithValue("@LastName", lastName);
             command.Parameters.AddWithValue("@HireDate", hireDate);

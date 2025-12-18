@@ -5,11 +5,10 @@ using VetClinic;
 
 namespace VetClinicConsole
 {
-    internal class EmployeeManager : Window
+    public class EmployeeManager : Window
     {
-        private Database _db;
         private List<Worker> _workers = new List<Worker>();
-
+        private Database _db;
         // Commands dictionary
         private Dictionary<string, Action<string[]>> _commands;
 
@@ -22,27 +21,24 @@ namespace VetClinicConsole
                 { "help", CmdHelp },           { "3", CmdHelp },
                 { "find", CmdFind },           { "4", CmdFind },
                 { "edit", CmdEdit },           { "5", CmdEdit },
-                { "del", CmdEdit },           { "6", CmdEdit },
-                { "add", CmdEdit },           { "7", CmdEdit },
+                { "del", CmdDelete },           { "6", CmdDelete },
+                { "add", CmdAdd },           { "7", CmdAdd },
                 { "clear", CmdClear },
                 { "exit", CmdExit }, { "*", CmdExit }, { "0", CmdExit }
             };
         }
 
-        public override void Run()
+        public override void Run(Database db)
         {
             Console.Clear();
             PrintLogo();
             PrintHelp();
-
-            _db = new Database("./Resources/Database/vets.db");
-
-            if (_db._connection == null)
+            if (db._connection == null)
             {
-                Console.WriteLine("⚠ ERROR: Database failed to load!");
+                Console.WriteLine("ERROR: Database failed to load!");
                 return;
             }
-
+            _db = db;
             while (true)
             {
                 Console.Write("\n> ");
@@ -174,6 +170,10 @@ namespace VetClinicConsole
             _db.DeleteRecord(id, table);
         }
 
+        private void CmdAdd(string[] args) {
+            _db.AddWorker();
+        }
+
         private void CmdClear(string[] args)
         {
             Console.Clear();
@@ -184,7 +184,7 @@ namespace VetClinicConsole
         private void CmdExit(string[] args)
         {
             var app = new AlmostOpusMagnum();
-            app.Run();
+            app.Run(_db);
         }
 
         // ────────────────────────────────────────────────────────────
@@ -211,6 +211,7 @@ COMMANDS:
 3) help                           - Shows this help menu
 4) find <ID> | <Name> <Surname>   - Find employee by ID or full name
 5) edit <ID>                      - Edit employee data
+6) del <ID> <TableName>           - Delete employee by ID from specified table
 clear                             - Clear the screen
 exit / 0 / *                      - Exit to main menu
 ");

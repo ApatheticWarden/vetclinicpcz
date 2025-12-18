@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VetClinicConsole
 {
-    internal class Worker : Person
+    public class Worker : Person
     {
         public uint ID { get; private set; }
         public string? HireDate { get; private set; }

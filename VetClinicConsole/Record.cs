@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace VetClinicConsole
 {
-    internal class Record
+    public class Record
     {
         public uint Id { get; set; }
         public uint ClientId { get; set; }

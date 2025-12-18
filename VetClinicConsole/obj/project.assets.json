@@ -340,23 +340,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Users\\irofi\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\VetClinicConsole.csproj",
+      "projectUniqueName": "C:\\Users\\irofi\\source\\repos\\vetclinicpcz\\VetClinicConsole\\VetClinicConsole.csproj",
       "projectName": "VetClinicConsole",
-      "projectPath": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\VetClinicConsole.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Downloads\\HliebBeseda\\vetclinicpcz\\VetClinicConsole\\obj\\",
+      "projectPath": "C:\\Users\\irofi\\source\\repos\\vetclinicpcz\\VetClinicConsole\\VetClinicConsole.csproj",
+      "packagesPath": "C:\\Users\\irofi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\irofi\\source\\repos\\vetclinicpcz\\VetClinicConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\irofi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -383,7 +383,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -410,7 +411,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
