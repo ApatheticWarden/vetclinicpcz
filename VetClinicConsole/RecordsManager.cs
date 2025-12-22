@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VetClinic;
 
 namespace VetClinicConsole
 {
@@ -60,10 +61,10 @@ namespace VetClinicConsole
                 ? "\n" + record.OutputData()
                 : "Record not found in loaded list.");
         }
-        public override void Run(Database db)
+        public override Window Run(Database db)
         {
             Console.Clear();
-            if (db._connection == null) return;
+            if (db._connection == null) return new AlmostOpusMagnum();
             _db = db;
 
             string logo = "   __                        _     \r\n  /__\\ ___  ___ ___  _ __ __| |___ \r\n / \\/// _ \\/ __/ _ \\| '__/ _` / __|\r\n/ _  \\  __/ (_| (_) | | | (_| \\__ \\\r\n\\/ \\_/\\___|\\___\\___/|_|  \\__,_|___/\r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   \r\n                                   ";
@@ -86,6 +87,9 @@ namespace VetClinicConsole
 
                 if (_commands.TryGetValue(command, out var handler)) {
                     handler.Invoke(args);
+                } else if (command.ToLower().Trim() == "exit" || command.ToLower().Trim() == "0") {
+                    Thread.Sleep(500);
+                    return new AlmostOpusMagnum();
                 } else {
                     Console.WriteLine("Unknown command. Type 'help'.");
                 }

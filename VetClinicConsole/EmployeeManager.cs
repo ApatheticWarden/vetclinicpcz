@@ -23,12 +23,11 @@ namespace VetClinicConsole
                 { "edit", CmdEdit },           { "5", CmdEdit },
                 { "del", CmdDelete },           { "6", CmdDelete },
                 { "add", CmdAdd },           { "7", CmdAdd },
-                { "clear", CmdClear },
-                { "exit", CmdExit }, { "*", CmdExit }, { "0", CmdExit }
+                { "clear", CmdClear }, { "8",CmdClear }
             };
         }
 
-        public override void Run(Database db)
+        public override Window Run(Database db)
         {
             Console.Clear();
             PrintLogo();
@@ -36,7 +35,7 @@ namespace VetClinicConsole
             if (db._connection == null)
             {
                 Console.WriteLine("ERROR: Database failed to load!");
-                return;
+                return new AlmostOpusMagnum();
             }
             _db = db;
             while (true)
@@ -54,12 +53,12 @@ namespace VetClinicConsole
                 string command = parts[0];
                 string[] args = parts.Skip(1).ToArray();
 
-                if (_commands.TryGetValue(command, out var handler))
-                {
+                if (_commands.TryGetValue(command, out var handler)) {
                     handler.Invoke(args);
-                }
-                else
-                {
+                } else if (command.ToLower() == "exit" || command.ToLower().Trim() == "0") {
+                    Thread.Sleep(500);
+                    return new AlmostOpusMagnum();
+                } else {
                     Console.WriteLine("Unknown command. Type 'help'.");
                 }
             }
@@ -181,12 +180,6 @@ namespace VetClinicConsole
             PrintHelp();
         }
 
-        private void CmdExit(string[] args)
-        {
-            var app = new AlmostOpusMagnum();
-            app.Run(_db);
-        }
-
         // ────────────────────────────────────────────────────────────
         // UTILITY METHODS
         // ────────────────────────────────────────────────────────────
@@ -202,8 +195,7 @@ namespace VetClinicConsole
               |_|            |___/                                      |___/            ");
         }
 
-        private void PrintHelp()
-        {
+        private void PrintHelp() {
             Console.WriteLine(@"
 COMMANDS:
 1) employees <lines> <page>      - Shows N employees at page K
@@ -212,8 +204,9 @@ COMMANDS:
 4) find <ID> | <Name> <Surname>   - Find employee by ID or full name
 5) edit <ID>                      - Edit employee data
 6) del <ID> <TableName>           - Delete employee by ID from specified table
-clear                             - Clear the screen
-exit / 0 / *                      - Exit to main menu
+7) add                            - Add new worker
+8) clear                             - Clear the screen
+0) exit                         - Exit to main menu
 ");
         }
     }
